@@ -48,6 +48,8 @@ def main() -> None:
     """
     Main execution function: handles input, calculation, processing (steps 2 & 3), and output.
     """
+    # Greeting the user
+    print("Welcome to the mini-profile generator!")
 
     # 2. Get User Input
 
