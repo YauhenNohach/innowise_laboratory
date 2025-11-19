@@ -6,7 +6,7 @@ CURRENT_YEAR: int = 2025
 # 1. Define a Function for the Profile & Calculations: generate_profile
 def generate_profile(age: int) -> str:
     """
-    Determines the user's 'life stage' based on their age (Child, Teenager, or Adult).
+    Determines the user's 'life stage' based on their age (Child, Teenager, or Adult)
     """
     life_stage: str = "Adult"
 
@@ -21,7 +21,7 @@ def generate_profile(age: int) -> str:
 # Function to display the profile (corresponds to step 4)
 def display_profile(user_profile: dict[str, Any]) -> None:
     """
-    Formats and prints the user profile summary.
+    Formats and prints the user profile summary
     """
     print("\n" + "-" * 3)
 
@@ -46,7 +46,7 @@ def display_profile(user_profile: dict[str, Any]) -> None:
 
 def main() -> None:
     """
-    Main execution function: handles input, calculation, processing (steps 2 & 3), and output.
+    Main execution function: handles input, calculation, processing (steps 2 & 3), and output
     """
     # Greeting the user
     print("Welcome to the mini-profile generator!")
@@ -65,14 +65,11 @@ def main() -> None:
     hobbies: list[str] = []
 
     # Loop to collect hobbies until 'stop' is entered
-    while True:
-        hobby_input: str = (
-            input("Enter a favorite hobby or type 'stop' to finish: ").strip().title()
-        )
-
-        if hobby_input.lower() == "stop":
-            break
-
+    while (
+        hobby_input := input("Enter a favorite hobby or type 'stop' to finish: ")
+        .strip()
+        .title()
+    ) != "Stop":
         if hobby_input:
             hobbies.append(hobby_input)
 
