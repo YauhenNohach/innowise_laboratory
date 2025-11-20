@@ -2,6 +2,10 @@ from typing import Any
 
 CURRENT_YEAR: int = 2025
 
+CHILD_MAX_AGE: int = 12
+TEENAGER_MIN_AGE: int = 13
+TEENAGER_MAX_AGE: int = 19
+
 
 # 1. Define a Function for the Profile & Calculations: generate_profile
 def generate_profile(age: int) -> str:
@@ -10,9 +14,9 @@ def generate_profile(age: int) -> str:
     """
     life_stage: str = "Adult"
 
-    if 0 <= age <= 12:
+    if 0 <= age <= CHILD_MAX_AGE:
         life_stage = "Child"
-    elif 13 <= age <= 19:
+    elif TEENAGER_MIN_AGE <= age <= TEENAGER_MAX_AGE:
         life_stage = "Teenager"
 
     return life_stage
